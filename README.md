@@ -12,6 +12,7 @@ Esquema del JSON de CV de <a href="https://jsonresume.org/schema/">jsonresume.or
 
 <p>
 Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a>
+y de <a href="https://github.com/Midudev">Midudev</a>
 
 </p>
 
@@ -98,7 +99,7 @@ pnpm dev
 
 ## 🔑 Licencia
 
-[MIT](LICENSE.txt) - Creado por [**midudev**](https://midu.dev).
+[MIT](LICENSE.txt) - Creado por [**Sergio Martin Muñoz**](https://github.com/Fezzik23).
 
 
 
