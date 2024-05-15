@@ -6,7 +6,7 @@
     "email": "sergiomartinmunoz@gmail.com",
     "phone": "+34 652817263",
     "url": "https://sergiomm.dev",
-    "summary": "Soy técnico superior en Desarrollo de aplicaciones multiplataforma y estudiante de Ingeniería del Software en la Universidad Rey Juan Carlos. Soy una persona trabajadora y abierta a colaborar en equipo, así como a aprender y formarme constantemente.",
+    "summary": "Soy técnico superior en Desarrollo de aplicaciones multiplataforma y desarrollador de software especializado en Python. Me considero una persona trabajadora y abierta a colaborar en equipo, así como a aprender y ampliar mi conocimiento técnico constantemente.",
     "location": {
       "address": "",
       "postalCode": "28044",
@@ -34,7 +34,10 @@
       "url": "https://twitch.tv/midudev",
       "startDate": "2022-09-12",
       "endDate": null,
-      "summary": "Automatización de procesos y análisis de datos con Python y Apache Airflow, haciendo uso de librerias como Pandas, Numpy, Openpyxls, etc. Tambien desarrollo web fullstack usando Python y Flask",
+      "summary": [
+                    "Automatización de procesos y análisis de datos con Python y Apache Airflow, haciendo uso de librerias como Pandas, Numpy, Openpyxls, etc.",
+                    "Desarrollo web fullstack usando Python y Flask."
+      ],
       "highlights": [
         "Started the company"
       ]
@@ -45,7 +48,7 @@
       "url": "https://twitch.tv/midudev",
       "startDate": "2017-03-01",
       "endDate": "2018-10-01",
-      "summary": "Colaborando en un proyecto de migración de COBOL a Java.",
+      "summary": ["Colaborando en un proyecto de migración de COBOL a Java."],
       "highlights": [
         "Started the company"
       ]
@@ -57,7 +60,7 @@
     "url": "https://organization.com/",
     "startDate": "2012-01-01",
     "endDate": "2013-01-01",
-    "summary": "Description…",
+    "summary": ["Description…"],
     "highlights": [
       "Awarded 'Volunteer of the Month'"
     ]
@@ -65,7 +68,7 @@
   "education": [{
     "institution": "Universidad rey Juan Carlos",
     "url": "https://www.uoc.edu/portal/es/index.html",
-    "area": "Ingeniero de Software",
+    "area": "Ingenieria de Software",
     "studyType": "Bachelor",
     "startDate": "2018-01-01",
     "endDate": null,
@@ -224,8 +227,8 @@
         "Algorithm",
         "Backtracking"
       ],
-      "url": "https://miduconf.com",
-      "github": "https://github.com/midudev/codi.link"
+      "url": "https://github.com/Fezzik23",
+      "github": "https://github.com/Fezzik23"
     }
   ]
 }
