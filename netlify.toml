@@ -1,0 +1,10 @@
+[build]
+  publish = "dist"
+  command = "pnpm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-astro"
+  
+[build.environment]
+  NPM_FLAGS = "--global pnpm"
+  NODE_VERSION = "16"
