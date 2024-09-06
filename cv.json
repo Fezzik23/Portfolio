@@ -196,6 +196,17 @@
   }],
   "projects": [
     {
+      "name": "Sokoban Solver",
+      "description": "Desarrollo de algoritmos de backtracking para la resolución del Juego Sokoban",
+      "highlights": [
+        "Python",
+        "Algorithm",
+        "Backtracking"
+      ],
+      "url": "https://sokoban-solver.netlify.app",
+      "github": "https://github.com/Fezzik23/sokoban-solver"
+    },
+    {
       "name": "Art3dcraft (en mantenimiento)",
       "isActive": true,
       "description": "Tienda online de articulos impresos en 3D hecha con Flask.",
@@ -218,17 +229,6 @@
         "Google AdSense"
       ],
       "url": "https://minlnk.com"
-    },
-    {
-      "name": "Sokoban Solver",
-      "description": "Desarrollo de algoritmos de backtracking para la resolución del Juego Sokoban",
-      "highlights": [
-        "Python",
-        "Algorithm",
-        "Backtracking"
-      ],
-      "url": "https://sokoban-solver.netlify.app",
-      "github": "https://github.com/Fezzik23/sokoban-solver"
     }
   ]
 }
