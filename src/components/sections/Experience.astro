@@ -31,7 +31,11 @@ import { work } from "@cv"
                 </header>
 
                 <footer>
-                  <p>{summary}</p>
+                  <div>
+                    {summary.map((section, index) => (
+                      <p>{section}</p>
+                    ))}
+                  </div>
                 </footer>
               </article>
             </li>
@@ -78,6 +82,10 @@ import { work } from "@cv"
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
+  }
+
+  footer p {
+    margin-top: 8px; /* Espacio en la parte superior de cada párrafo */
   }
 
   @media (width <= 700px) {
