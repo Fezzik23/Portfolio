@@ -30,10 +30,23 @@
   "work": [
     {
       "name": "Ayscom",
+      "position": "Desarrollador PHP & Fullstack",
+      "url": "https://twitch.tv/midudev",
+      "startDate": "2025-12-01",
+      "endDate": null,
+      "summary": [
+                    "Ampliación y mantenimiento evolutivo de una web con PHP, bases de datos SQL y Linux, optimizando consultas y despliegues."
+      ],
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "name": "Ayscom",
       "position": "Desarrollador Python & Fullstack",
       "url": "https://twitch.tv/midudev",
       "startDate": "2022-09-12",
-      "endDate": null,
+      "endDate": "2025-11-31",
       "summary": [
                     "Automatización de procesos y análisis de datos con Python y Apache Airflow, haciendo uso de librerias como Pandas, Numpy, Openpyxls, etc.",
                     "Desarrollo web fullstack usando Python y Flask."
@@ -170,6 +183,27 @@
       "level": "Avanzado",
       "keywords": [
         "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+      ]
+    },
+    {
+      "name": "PHP",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Backend", "Mantenimiento Evolutivo"
+      ]
+    },
+    {
+      "name": "SQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "Optimización de Consultas", "Modelado de Datos"
+      ]
+    },
+    {
+      "name": "Linux",
+      "level": "Avanzado",
+      "keywords": [
+        "Servidor", "Despliegue", "Administración de Sistemas"
       ]
     }
   ],
