@@ -124,14 +124,14 @@
   "skills": [
     {
       "name": "Python",
-      "level": "Master",
+      "level": "Avanzado",
       "keywords": [
         "Desarrollo Web", "Backend", "Fullstack"
       ]
     },
     {
       "name": "Flask",
-      "level": "Avanzado",
+      "level": "Intermedio",
       "keywords": [
         "Desarrollo Web", "Backend", "Frontend"
       ]
@@ -145,14 +145,14 @@
     },
     {
       "name": "HTML",
-      "level": "Master",
+      "level": "Avanzado",
       "keywords": [
         "Desarrollo Web", "Frontend"
       ]
     },
     {
       "name": "CSS",
-      "level": "Master",
+      "level": "Avanzado",
       "keywords": [
         "Desarrollo Web", "Frontend", "Diseño Responsive"
       ]
@@ -182,7 +182,7 @@
       "name": "Apache Airflow",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+        "Desarrollo Web", "Backend", "JavaScript"
       ]
     },
     {
@@ -210,11 +210,11 @@
   "languages": [
     {
       "language": "Spanish",
-      "fluency": "Native speaker"
+      "fluency": "Nativo"
     },
     {
       "language": "English",
-      "fluency": "Advanced"
+      "fluency": "Intermedio"
     }
   ],
   "interests": [{
