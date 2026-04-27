@@ -87,6 +87,46 @@ const { image, summary } = basics
     text-wrap: pretty;
   }
 
+  body.pdf-export p {
+    text-align: left !important;
+    text-wrap: wrap !important;
+  }
+
+  body.pdf-export h1 {
+    color: #111 !important;
+    display: block !important;
+    text-align: left !important;
+    visibility: visible !important;
+  }
+
+  body.pdf-export section > h2 {
+    color: #111 !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    visibility: visible !important;
+  }
+
+  body.pdf-export article,
+  body.pdf-export article header,
+  body.pdf-export article footer {
+    text-align: left !important;
+  }
+
+  body.pdf-export article {
+    align-items: stretch !important;
+  }
+
+  body.pdf-export article header,
+  body.pdf-export article h3,
+  body.pdf-export article p {
+    display: block !important;
+  }
+
+  body.pdf-export article p {
+    width: 100% !important;
+  }
+
   .print {
     display: none !important;
   }

@@ -99,6 +99,105 @@ const profilesInfo = profiles.map(({ network, url }) => {
 
   const ninja = document.querySelector("ninja-keys")
   const footerButton = document.getElementById("footer-button")
+  const resumeElement = document.querySelector("main")
+  const importFromCdn = async (url: string) => import(/* @vite-ignore */ url)
+
+  const downloadCvAsPdf = async () => {
+    if (resumeElement == null) return
+
+    const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
+      importFromCdn("https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/+esm"),
+      importFromCdn("https://cdn.jsdelivr.net/npm/jspdf@2.5.1/+esm"),
+    ])
+
+    const canvas = await html2canvas(resumeElement as HTMLElement, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: "#ffffff",
+      windowWidth: document.documentElement.scrollWidth,
+      onclone: (clonedDocument: Document) => {
+        const clonedResume = clonedDocument.querySelector("main")
+
+        clonedDocument.body.classList.add("pdf-export")
+
+        clonedResume?.querySelectorAll<HTMLElement>("h1").forEach((element) => {
+          element.style.display = "block"
+          element.style.visibility = "visible"
+          element.style.color = "#111"
+          element.style.textAlign = "left"
+        })
+
+        clonedResume?.querySelectorAll<HTMLElement>("section > h2").forEach(
+          (element) => {
+            element.style.display = "block"
+            element.style.visibility = "visible"
+            element.style.color = "#111"
+            element.style.textAlign = "left"
+            element.style.marginBottom = "8px"
+          }
+        )
+
+        clonedResume
+          ?.querySelectorAll<HTMLElement>(
+            "p, article, article header, article footer"
+          )
+          .forEach((element) => {
+            element.style.textAlign = "left"
+          })
+
+        clonedResume?.querySelectorAll<HTMLElement>("p").forEach((element) => {
+          element.style.setProperty("text-wrap", "wrap")
+          element.style.display = "block"
+          element.style.width = "100%"
+        })
+
+        clonedResume?.querySelectorAll<HTMLElement>("article header").forEach(
+          (element) => {
+            element.style.display = "block"
+          }
+        )
+
+        clonedResume?.querySelectorAll<HTMLElement>("article h3").forEach(
+          (element) => {
+            element.style.display = "block"
+          }
+        )
+
+        clonedResume?.querySelectorAll<HTMLElement>("article footer").forEach(
+          (element) => {
+            element.style.justifyContent = "flex-start"
+          }
+        )
+
+        clonedResume?.querySelectorAll<HTMLElement>("article").forEach(
+          (element) => {
+            element.style.alignItems = "stretch"
+          }
+        )
+      },
+    })
+
+    const imageData = canvas.toDataURL("image/jpeg", 0.98)
+    const pdf = new jsPDF("p", "mm", "a4")
+    const pdfWidth = pdf.internal.pageSize.getWidth()
+    const pdfHeight = pdf.internal.pageSize.getHeight()
+    const imageWidth = pdfWidth
+    const imageHeight = (canvas.height * imageWidth) / canvas.width
+    let heightLeft = imageHeight
+    let position = 0
+
+    pdf.addImage(imageData, "JPEG", 0, position, imageWidth, imageHeight)
+    heightLeft -= pdfHeight
+
+    while (heightLeft > 0) {
+      position = heightLeft - imageHeight
+      pdf.addPage()
+      pdf.addImage(imageData, "JPEG", 0, position, imageWidth, imageHeight)
+      heightLeft -= pdfHeight
+    }
+
+    pdf.save("cv.pdf")
+  }
 
   footerButton?.addEventListener("click", () => {
     var event = new KeyboardEvent("keydown", {
@@ -146,6 +245,16 @@ const profilesInfo = profiles.map(({ network, url }) => {
         handler: () => {
           window.print()
         },
+      },
+      {
+        id: "download-pdf",
+        title: "Descargar CV en PDF",
+        icon: `<svg style="margin-right: 8px" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V3.75m0 12.75-3.75-3.75M12 16.5l3.75-3.75M3.75 15v2.25A2.25 2.25 0 0 0 6 19.5h12a2.25 2.25 0 0 0 2.25-2.25V15" />
+</svg>`,
+        hotkey: "ctrl+shift+s",
+        section: "Acciones",
+        handler: downloadCvAsPdf,
       },
       ...data,
     ]
